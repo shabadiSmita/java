@@ -1,0 +1,75 @@
+package Second_jdbc.user;
+
+public class User 
+{
+	private int userid;
+	private String username;
+	private int usergetuserpassword;
+	private String useremail;
+	
+	
+	
+	
+	public int getGetuserid() {
+		return getuserid;
+	}
+
+
+
+
+	public void setGetuserid(int getuserid) {
+		this.getuserid = getuserid;
+	}
+
+
+
+
+	public String getGetusername() {
+		return getusername;
+	}
+
+
+
+
+	public void setGetusername(String getusername) {
+		this.getusername = getusername;
+	}
+
+
+
+
+	public int getGetusergetuserpassword() {
+		return getusergetuserpassword;
+	}
+
+
+
+
+	public void setGetusergetuserpassword(int getusergetuserpassword) {
+		this.getusergetuserpassword = getusergetuserpassword;
+	}
+
+
+
+
+	public String getGetuseremail() {
+		return getuseremail;
+	}
+
+
+
+
+	public void setGetuseremail(String getuseremail) {
+		this.getuseremail = getuseremail;
+	}
+
+
+
+
+	public static void main(String[] args)
+	{
+		
+	}
+	
+
+}

@@ -1,0 +1,79 @@
+package com.ty.springBoot_FoodApp.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.ty.springBoot_FoodApp.Config.ResponseStructure;
+import com.ty.springBoot_FoodApp.Exception.UserIdNotFoundException;
+import com.ty.springBoot_FoodApp.dao.ProductDao;
+import com.ty.springBoot_FoodApp.dto.Product;
+import com.ty.springBoot_FoodApp.dto.User;
+
+
+@Service 
+public class ProductService {
+	@Autowired
+	private ProductDao productdao;
+	
+	public ResponseEntity<ResponseStructure<Product>> saveProduct(Product product) 
+	{
+		ResponseStructure<Product> responseStructure=new ResponseStructure<>();
+		responseStructure.setStatus(HttpStatus.CREATED.value());
+		responseStructure.setMessage("user successfully saved");
+		responseStructure.setData(productdao.saveProduct(product));
+		return  new ResponseEntity<ResponseStructure<Product>>(responseStructure,HttpStatus.CREATED);
+		
+	}
+	public ResponseEntity<ResponseStructure<Product>> updateProduct(Product product,int id) {
+		Product product1=productdao.updateProdct(id,product);
+		ResponseStructure<Product> responseStructure=new ResponseStructure<>();
+		if(product1!=null) {
+		responseStructure.setStatus(HttpStatus.OK.value());
+		responseStructure.setMessage("user successfully updated");
+		responseStructure.setData(product);
+		return  new ResponseEntity<ResponseStructure<Product>>(responseStructure,HttpStatus.OK);	
+		}
+		throw new UserIdNotFoundException("product id is not present");		
+		
+	}
+		public ResponseEntity<ResponseStructure<Product>> deleteProduct(int id) {
+		Product product=productdao.deleteproduct(id);
+		ResponseStructure<Product> responseStructure=new ResponseStructure<>();
+		if(product!=null) {
+			responseStructure.setStatus(HttpStatus.OK.value());
+			responseStructure.setMessage("user successfully deleted");
+			responseStructure.setData(product);
+			return  new ResponseEntity<ResponseStructure<Product>>(responseStructure,HttpStatus.OK);
+			}
+		throw new UserIdNotFoundException("product id is not present");
+				
+		}
+		
+		public ResponseEntity<ResponseStructure<Product>> getProductById(int mid) {
+			List<Product> product=productdao.findAllproducts(mid);
+			Product product1=productdao.getProductById(mid);
+			ResponseStructure<Product> responseStructure=new ResponseStructure<>();
+			if(product1!=null) {
+				responseStructure.setStatus(HttpStatus.FOUND.value());
+				responseStructure.setMessage("user successfully get");
+				responseStructure.setData(product1);
+				return  new ResponseEntity<ResponseStructure<Product>>(responseStructure,HttpStatus.FOUND);
+			}
+			throw new UserIdNotFoundException("product id is not present");
+		}
+
+}
+
+
+		
+		
+							
+			
+		
+	
+
+

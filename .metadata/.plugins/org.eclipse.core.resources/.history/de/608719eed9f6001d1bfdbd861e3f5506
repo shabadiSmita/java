@@ -1,0 +1,67 @@
+package com.ty.springBoot_FoodApp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.ty.springBoot_FoodApp.Config.ResponseStructure;
+import com.ty.springBoot_FoodApp.Exception.UserIdNotFoundException;
+import com.ty.springBoot_FoodApp.dao.ItemsDao;
+import com.ty.springBoot_FoodApp.dto.Items;
+import com.ty.springBoot_FoodApp.dto.Menu;
+
+@Service
+public class ItemsService {
+	@Autowired
+	private ItemsDao itemsdao;
+	
+	public ResponseEntity<ResponseStructure<Items>> saveItems(Items items) {
+		ResponseStructure<Items> responseStructure=new ResponseStructure<>();
+		responseStructure.setStatus(HttpStatus.CREATED.value());
+		responseStructure.setMessage("user successfully saved");
+		responseStructure.setData(itemsdao.saveItems(items));
+		return new ResponseEntity<ResponseStructure<Items>>(responseStructure,HttpStatus.CREATED);	
+		}
+		
+	public ResponseEntity<ResponseStructure<Items>> updateItems(Items items ,int item_id){
+		Items  items1= itemsdao.updateItems(items, item_id);
+		ResponseStructure<Items> responseStructure=new ResponseStructure<>();
+		if(items1!=null) {
+		responseStructure.setStatus(HttpStatus.OK.value());
+		responseStructure.setMessage("user successfully updated");
+		responseStructure.setData(items1);
+		return new ResponseEntity<ResponseStructure<Items>>(responseStructure,HttpStatus.OK);	
+		}else {
+		throw new UserIdNotFoundException("item id is not present");
+		}
+	}
+	
+	public ResponseEntity<ResponseStructure<Items>> deleteItems(Items items, int item_id) {
+		Items items1=itemsdao.deleteItems(item_id);
+		ResponseStructure<Items> responseStructure=new ResponseStructure<>();
+		if(items1!=null) {
+			responseStructure.setStatus(HttpStatus.OK.value());
+			responseStructure.setMessage("user successfully deleted");
+			responseStructure.setData(items1);
+			return new ResponseEntity<ResponseStructure<Items>>(responseStructure,HttpStatus.OK);				}
+	
+	throw new UserIdNotFoundException("item id is not present");
+          
+}
+   public ResponseEntity<ResponseStructure<Items>> getById(Items items, int item_id) {
+		Items items1=itemsdao.getItemsById(item_id);
+		ResponseStructure<Items> responseStructure=new ResponseStructure<>();
+		if(items!=null) {
+			responseStructure.setStatus(HttpStatus.FOUND.value());
+			responseStructure.setMessage("user successfully get");
+			responseStructure.setData(items);
+			return new ResponseEntity<ResponseStructure<Items>>(responseStructure,HttpStatus.FOUND);	
+		}else {
+		throw new UserIdNotFoundException("item id is not present");
+	}
+}
+
+	
+	
+}

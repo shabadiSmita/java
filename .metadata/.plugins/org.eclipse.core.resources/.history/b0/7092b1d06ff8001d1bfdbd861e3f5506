@@ -1,0 +1,12 @@
+package com.ty.springBoot_FoodApp.repo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ty.springBoot_FoodApp.dto.Product;
+
+public interface ProductRepo extends JpaRepository<Product, Integer>{
+	
+	public List<Product> getAllProduct(int mid);
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\smita\Desktop\Java Project Class\springMvc1_Employee\pom.xml"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\springMvc1_Employee\src\main\java\spring_Employee\dto\Empoyee.java"/>
+			<item value="C:\Program Files\Java"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\SpringProgram\src\main\java\springcore\School_Main.java"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\hibernate-test1\pom.xml"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\Second_jdbc.user\src\main\java\Second_jdbc\user\UserCrud.java"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\Second_jdbc\pom.xml"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\Hibernate\src\com\ty\jdbc\dynamic\UpdateDynamic.java"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\studentdb\src"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\Oops Project-1"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\src"/>
+			<item value="C:\Users\smita\Desktop\Java Project Class\Myperson"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.ty"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="springMvc_Employee"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="667"/>
+		<item key="x" value="720"/>
+		<item key="y" value="71"/>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="employee_spring"/>
+			<item value="springMvc1_Employee"/>
+			<item value="makeup"/>
+			<item value="student1"/>
+			<item value="students"/>
+			<item value="productServlet"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="employee_spring"/>
+			<item value="springMvc1_Employee"/>
+			<item value="makeup"/>
+			<item value="student1"/>
+			<item value="students"/>
+			<item value="productServlet"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\smita\Downloads\springBoot_FoodApp"/>
+			<item value="C:\Users\smita\Downloads\springBoot_Rest"/>
+			<item value="C:\Users\smita\Downloads\springBoot_Item (1)"/>
+			<item value="C:\Users\smita\Downloads\springBoot_demo\springBoot_demo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

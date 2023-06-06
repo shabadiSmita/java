@@ -1,0 +1,5 @@
+package com.ty.springBoot_FoodApp.Exception;
+
+public class ApplicationHandler {
+
+}

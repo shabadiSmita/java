@@ -1,0 +1,19 @@
+package defaultsorting;
+
+public class Employe 
+{
+	String name;
+	double sal;
+	Employe(String name,double sal)
+	{
+		this.name=name;
+		this.sal=sal;
+	}
+	@Override
+	public String toString()
+	{
+		return "sal of"+name+"is"+sal+"lpa";
+	}
+	
+
+}

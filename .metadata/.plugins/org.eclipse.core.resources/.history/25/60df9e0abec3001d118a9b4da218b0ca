@@ -1,0 +1,19 @@
+package Second_jdbc.user;
+
+public class User 
+{
+	private int userid;
+	private String username;
+	private int usergetuserpassword;
+	private String useremail;
+	
+	
+	
+	
+	public static void main(String[] args)
+	{
+		
+	}
+	
+
+}

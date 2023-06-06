@@ -1,0 +1,5 @@
+package com.ty.springBoot_FoodApp.dto;
+
+public @interface NotNull {
+
+}

@@ -1,0 +1,16 @@
+package defaultsorting;
+
+public class Car 
+{
+	int cost;
+	Car(int cost)
+	{
+		this.cost=cost;
+	}
+	public static void cost()
+	{
+		System.out.println(2000);
+	}
+toString()
+
+}

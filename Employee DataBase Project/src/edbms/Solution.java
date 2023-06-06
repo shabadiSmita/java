@@ -1,0 +1,6 @@
+package edbms;
+
+public class Solution 
+{
+
+}

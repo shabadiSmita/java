@@ -1,0 +1,5 @@
+package Second_jdbc.user;
+
+public class User {
+
+}

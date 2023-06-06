@@ -1,0 +1,48 @@
+package com.ty.springBoot_FoodApp.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ty.springBoot_FoodApp.Config.ResponseStructure;
+import com.ty.springBoot_FoodApp.dto.Menu;
+import com.ty.springBoot_FoodApp.service.MenuService;
+
+@RestController
+public class MenuController {
+	@Autowired
+	private MenuService service;
+	
+	@PostMapping("/savemenu")
+	public ResponseEntity<ResponseStructure<Menu>> saveMenu(@Valid @RequestBody Menu menu) {
+		return service.saveMenu(menu);
+		
+		
+	}
+	@PutMapping("/updtaemenu") 
+	public ResponseEntity<ResponseStructure<Menu>> updateMenu(@Valid @RequestBody Menu menu,@RequestParam int id) {
+		return service.updateMenu(menu, id);
+		
+	}
+	@DeleteMapping("/deletemenu")
+	public ResponseEntity<ResponseStructure<Menu>> deleteMenu(@Valid @RequestParam int mid) {
+		return service.deleteMenu(mid);
+		
+		
+	}
+	@GetMapping("/getmenu")
+	public ResponseEntity<ResponseStructure<Menu>> getMenu(@Valid @RequestParam int mid) {
+		return service.getMenuById(mid);
+		
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+package com.jdbc.makeup.controller;
+
+import java.util.List;
+
+import com.jdbc.makeup.dao.MakeupDao;
+import com.jdbc.makeup.dao.MakeupDaoImpl;
+import com.jdbc.makeup.dto.MakeupDto;
+
+public class MakeupControllerImpl implements MakeupContoller
+
+{
+	MakeupDao dao = new MakeupDaoImpl();
+
+	@Override
+	public boolean save(MakeupDto dto) 
+	{
+		if(dto!=null && dto.getBrandname().length()>=2){
+			System.out.println("Data is Valid");
+			dao.save(dto);
+			return true;
+			
+		}
+		return false;
+	}
+
+	@Override
+	public List<MakeupDto> readAll() {
+		
+		return dao.readAll();
+	}
+	
+
+}
